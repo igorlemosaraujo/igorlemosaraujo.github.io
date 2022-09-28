@@ -1,0 +1,71 @@
+.background-introducao {
+  background-color: #f7f7f7;
+  margin: 0 auto;
+}
+
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 5rem;
+  line-height: 1.125;
+  margin-bottom: 2fr;
+  position: relative;
+}
+
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/Decoracao.svg") no-repeat center;
+  position: absolute;
+  left: -100px;
+  z-index: -1;
+}
+
+.introducao p {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1200px) {
+  .introducao h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    top: -10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .introducao {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .introducao h1 {
+    font-size: 3rem;
+  }
+  .introducao img {
+    display: none;
+  }
+}

@@ -1,0 +1,137 @@
+.background-experiencia {
+  background-color: #191919;
+  color: #fff;
+}
+
+.experiencia {
+  max-width: 1200px;
+  padding: 60px 30px;
+  margin: 0 auto;
+  display: flex;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  gap: 200px;
+}
+
+.experiencia .subtitulo {
+  color: #fff;
+}
+
+.experiencia-texto {
+  color: #dedede;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  margin: 1.5rem 0;
+  max-width: 30ch;
+}
+
+.experiencia-texto strong {
+  color: #25d022;
+}
+
+.empresas {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: 50px;
+}
+
+.empresa {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 4fr;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.empresa::before {
+  content: "";
+  display: block;
+  position: absolute;
+  gap: 20px;
+  width: 500px;
+  height: 3px;
+  background: linear-gradient(#25d022, #bef95d);
+  top: -20px;
+}
+
+.empresa-ano {
+  grid-row: span 3;
+  font-size: 1.3rem;
+  color: #9c9c9c;
+}
+
+.empresa-titulo {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.empresa-habilidade {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-content: start;
+}
+
+.empresa-habilidade li {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  max-width: 300px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  color: #0e0e0e;
+}
+
+.empresa-texto {
+  font-size: 1rem;
+  color: #dedede;
+  line-height: 1.4;
+  max-width: 40ch;
+}
+
+@media (max-width: 1200px) {
+  .empresa::before {
+    width: 40px;
+    height: 5px;
+  }
+  .experiencia-texto {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+  }
+  .experiencia {
+    gap: 100px;
+  }
+  .empresa-habilidade {
+    gap: 10px;
+  }
+  .empresa-habilidade li {
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 800px) {
+  .experiencia {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+  }
+  .experiencia-texto {
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+  .experiencia .subtitulo {
+    text-align: center;
+  }
+  .empresa {
+    gap: 10px;
+  }
+  .empresa-ano {
+    text-align: center;
+  }
+  .empresa::before {
+    display: none;
+  }
+}
